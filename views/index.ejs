@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+    <script src="
+https://cdn.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js
+"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css" integrity="sha512-t7Few9xlddEmgd3oKZQahkNI4dS6l80+eGEzFQiqtyVYdvcSG2D3Iub77R20BdotfRPA9caaRkg1tyaJiPmO0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="libs/bootstrap.min.css" />
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+  <body>
+    <div class="container-bigger-img">
+  <button class="out-container position-absolute z-3"
+          style="top:20px; right:20px; color:ghostwhite; background-color: transparent; border:none; font-size: 40px; font-weight: bolder;">⛌</button>
+  <img class="show-img" src="" alt="" style="max-width:90%; max-height:90%;">
+</div>
+    <header class="load-hidden d-flex position-fixed justify-content-center p-2">
+        <div class="nav-grid rounded-5 bg-light position-relative">
+          <a class="navegate" id="2" tabindex="0" href="#inicio">INÍCIO</a>
+          <a class="navegate" id="26" tabindex="0" href="#sobre" style="
+  scroll-padding-top: 100px;">SOBRE</a>
+          <a class="navegate" id="50" tabindex="0" href="#servicos">SERVIÇOS</a>
+          <a class="navegate" id="75" tabindex="0" href="#feedback">AVALIAÇÕES</a>
+          <div class="focused"></div>
+        </div>
+      </header>
+  <section id="inicio" class="d-flex">
+    <div class="wrapper d-flex">
+      <div class="home d-flex">
+        <aside class="profile-aside d-flex rounded-5">
+          <div class="qualifications load-hidden position-absolute">
+              <p class="m-2">Qualificação</p>
+              <div class="stars m-0 d-flex gap-3">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+            </div>
+          <div class="position-relative">
+            <img class="profileapper user load-hidden" src="/images/paulo.png"/>
+            <div class="img-container load-hidden rounded-5"></div>
+            <div class="position-absolute bottom-0 d-flex justify-content-between text-light z-1 p-3 w-100 align-items-center">
+              <span class="">@PauloAguiar</span>
+              <a href="https://www.instagram.com/pauloaguiardearruda/" class="rounded-4 bg-light p-2 text-black text-decoration-none fs-6 fs-md-4">+ adicionar</a>
+            </div>
+          </div>
+          <div>
+          </div>
+        </aside>
+        
+        <div class="more-container d-flex flex-column justify-content-end">
+          <div class="title">
+            <img class="animate img-fluid" src="/fonts/portfolio.png"/>
+          </div>
+          <div class="more">
+            <div class="more-wrapper load-hidden">
+              <div class="music-player d-flex flex-column align-items-center position-relative p-3 mb-2">
+                <p class="text-black">Music title</p>
+                <div class="progress-bar"><div class="fill-bar"></div></div>
+                <div class="control load-hidden d-flex">
+                  <button><i class="bi bi-skip-start-fill"></i></button>
+                  <button onclick="playSong()"><i id="icon" class="bi bi-play-fill"></i></button>
+                  <button><i class="bi bi-skip-end-fill"></i></button>
+                </div>
+              </div>
+              <div class="socials load-hidden gap-2">
+                <div>
+                  <a><i class="bi bi-whatsapp"></i></a>
+                </div>
+                <div>
+                  <a href="https://www.instagram.com/pauloaguiardearruda/"><i class="bi bi-instagram"></i></a>
+                </div>
+                <div>
+                  <a><i class="bi bi-behance"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="more-photo bigger-img load-hidden" id="photo-1">
+              <img src="/images/paulo-2.jpg"/>
+            </div>
+            <div class="more-photo bigger-img load-hidden" id="photo-2">
+              <img src="/images/paulo-3.png"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="sobre">
+    <div class="wrap-sobre">
+      <div class="sobre-text">
+        <h1 class="title-sobre load-hidden m-3"><span class="text-light">#</span>Sobre mim</h1>
+        <p class="presentation load-hidden">
+          Meu nome é <b>PAULO RICARDO</b>, tenho 21 anos, trabalho com arte gráfica a 4 anos, já fiz camisas para várias coisas, desde; igrejas à ligas acadêmicas, já produzi uma histórias em quadrinhos em um projeto inovador pelo IFRO. Hoje, ainda, estou graduando em odontologia pela faculdade FIMCA.
+        </p>
+        <div class="skills load-hidden mt-5">
+          <p class="m-0"><i>Software skills</i></p>
+          <div class="softwares m-0">
+            <img src="/images/krita.svg"/>
+            <img src="/images/photoshop.svg"/>
+            <img src="/images/canva.svg"/>
+          </div>
+        </div>
+      </div>
+      <aside class="odonto-aside">
+        <div class="seta">
+          <i class="bi bi-instagram"></i>
+          <p class="m-0">EU</p>
+        </div>
+        <img class="odonto-img bigger-img load-hidden" src="/images/odonto.jpeg"/>
+      </aside>
+    </div>
+  </section>
+  <section id="servicos">
+    <div class="servicos-wrapper">
+      <ul class="nav nav-tabs load-hidden" id="myTab" role="tablist">
+        <li class="nav-item">
+          <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#ilustracoes" type="button"><i class="ti ti-pencil"></i><span class="p-2 w-100">ilustrações</span></button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#camisas" type="button"><i class="ti ti-shirt"></i><span class="p-2 w-100">camisas</span></button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#logos" type="button"><i class="ti ti-tag"></i><span class="p-2 w-100">logos</span></button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#posts" type="button"><i class="ti ti-brand-instagram"></i><span class="p-2 w-100">posts</span></button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#quadrinhos" type="button"><i class="ti ti-book"></i><span class="p-2 w-100">quadrinhos</span></button>
+        </li>
+      </ul>
+
+      <!-- Conteúdo das Tabs -->
+      <div class="tab-content w-100 h-100 mt-3">
+        <div class="tab-pane fade show active fade" id="ilustracoes">
+          <div class="wrapper-content">
+          <div class="content">
+            <% imagens.filter(img => img.categoria === 'ilustracao').forEach(function(img) { %> <img class="bigger-img load-hidden" src="<%= img.url %>" alt="<%= img.id %>" data-id="<%= img.id %>" class="bigger-img"/> <% }) %>
+          </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="camisas">
+          <div class="wrapper-content">
+          <div class="content">
+            <% imagens.filter(img => img.categoria === 'camisa').forEach(function(img) { %>
+              <img class="bigger-img load-hidden" src="<%= img.url %>" alt="<%= img.id %>" data-id="<%= img.id %>" class="bigger-img"/>
+            <% }) %>
+          </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="logos">
+          <div class="wrapper-content">
+          <div class="content">
+            <% imagens.filter(img => img.categoria === 'logo').forEach(function(img) { %>
+              <img class="bigger-img load-hidden" src="<%= img.url %>" alt="<%= img.id %>" data-id="<%= img.id %>" class="bigger-img"/>
+            <% }) %>
+          </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="posts">
+          <div class="wrapper-content">
+          <div class="content">
+            <% imagens.filter(img => img.categoria === 'post').forEach(function(img) { %>
+              <img class="bigger-img load-hidden" src="<%= img.url %>" alt="<%= img.id %>" data-id="<%= img.id %>" class="bigger-img"/>
+            <% }) %>
+          </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="quadrinhos">
+          <div class="wrapper-content">
+          <div class="content">
+          </div>
+          </div>
+      </div>
+    </div>
+  </section>
+  <section id="feedback">
+      
+      <div class="carousel load-hidden position-relative">
+
+        <div class="screen">
+          <button class="prev">‹</button>
+          <button class="next">›</button>
+        </div>
+        <div class="position-relative"><div class="work-feedback load-hidden mt-0 w-100">
+             <p class="m-0"><i>Feedback</i></p></div>
+        <div class="carousel-track">
+          <div class="card"><div class="card-wrapper d-flex flex-column flex-sm-row align-items-center w-100"><aside class="col-sm-4 position-relative"><img class="client-1 w-100"src="/images/user-feedback-3.png"><div class="circle-client">
+                </div></aside><div class="experience w-100 p-3"><h2>Fulano</h2><span>O serviços do paulo são excelentes.</span></div></div></div>
+          <div class="card"><div class="card-wrapper d-flex flex-column flex-sm-row align-items-center w-100"><aside class="col-sm-4 position-relative"><img class="client-2 w-100"src="/images/user-feedback-2.png"><div class="circle-client">
+                </div></aside><div class="experience w-100 p-3"><h2>Fulano</h2><span>O serviços do paulo são excelentes.</span></div></div></div>
+          <div class="card"><div class="card-wrapper d-flex flex-column flex-sm-row align-items-center w-100"><aside class="col-sm-4 position-relative"><img class="client-3 w-100"src="/images/user-feedback.png"><div class="circle-client">
+                </div></aside><div class="experience w-100 p-3"><h2>Fulano</h2><span>O serviços do paulo são excelentes.</span></div></div></div>
+          <div class="card"><div class="card-wrapper d-flex flex-column flex-sm-row align-items-center w-100"><aside class="col-sm-4 position-relative"><img class="client-3 w-100"src="/images/user-feedback-2.png"><div class="circle-client">
+                </div></aside><div class="experience w-100 p-3"><h2>Fulano</h2><span>O serviços do paulo são excelentes.</span></div></div></div>
+          <div class="card"><div class="card-wrapper d-flex flex-column flex-sm-row align-items-center w-100"><aside class="col-sm-4 position-relative"><img class="client-4 w-100"src="/images/user-feedback.png"><div class="circle-client">
+                </div></aside><div class="experience w-100 p-3"><h2>Fulano</h2><span>O serviços do paulo são excelentes.</span></div></div></div>
+        </div>
+      </div>
+      </div>
+      <div class="marquee">
+    <div class="track">
+      <div class="item">Contate-me</div>
+      <div class="item">Contate-me</div>
+      <div class="item">Contate-me</div>
+      <div class="item">Contate-me</div>
+      <div class="item">Contate-me</div>
+      <div class="item">Contate-me</div>
+      <!-- duplicate to make it seamless -->
+      <div class="item">Contate-me</div>
+      <div class="item">Contate-me</div>
+      <div class="item">Contate-me</div>
+      <div class="item">Contate-me</div>
+      <div class="item">Contate-me</div>
+      <div class="item">Contate-me</div>
+    </div>
+  </div>
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.min.js" integrity="sha512-Z8CqofpIcnJN80feS2uccz+pXWgZzeKxDsDNMD/dJ6997/LSRY+W4NmEt9acwR+Gt9OHN0kkI1CTianCwoqcjQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="/libs/bootstrap.bundle.min.js"></script>
+  <script src="/javascripts/main.js" defer></script>
+  </body>
+</html>
