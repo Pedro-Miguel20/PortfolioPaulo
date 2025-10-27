@@ -209,34 +209,6 @@ track.addEventListener("touchend", () => {
   endX = 0;
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  const bigger = document.querySelectorAll('.bigger-img');
-  const myDiv = document.querySelector('.container-bigger-img');
-  const closeBtn = document.querySelector('.out-container');
-  const showImg = document.querySelector('.show-img');
-
-  bigger.forEach(img => {
-    img.addEventListener('click', () => {
-      showImg.src = img.src;
-      myDiv.style.display = 'flex';
-    });
-  });
-
-  if (closeBtn) {
-    closeBtn.addEventListener('click', () => {
-      myDiv.style.display = 'none';
-      showImg.src = '';
-    });
-  }
-
-  myDiv.addEventListener('click', (e) => {
-    if (e.target === myDiv) {
-      myDiv.style.display = 'none';
-      showImg.src = '';
-    }
-  });
-});
-
 // PDF.js para pré-visualização de PDFs
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -255,6 +227,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="pdf-preview"
          style="overflow-y:auto; max-height:100%; height: 100%; width:95%; display:flex; flex-direction:column; align-items:center; scale: 0.85; gap: 10px;">
     </div>
+    <img class="show-img" src="" alt="" style="max-width:90%; max-height:90%;">
   `;
 
   const previewDiv = container.querySelector(".pdf-preview");
@@ -294,6 +267,7 @@ document.addEventListener("DOMContentLoaded", () => {
       pdfjsLib.getDocument(pdf.url).promise.then(pdfDoc => {
         for (let pageNum = 1; pageNum <= Math.min(5, pdfDoc.numPages); pageNum++) {
           pdfDoc.getPage(pageNum).then(page => {
+            document.querySelector(".pdf-preview").style.display = "flex";
             const pageCanvas = document.createElement("canvas");
             const viewport = page.getViewport({ scale: 1 });
             pageCanvas.width = viewport.width;
@@ -308,4 +282,31 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+document.addEventListener('DOMContentLoaded', () => {
+  const bigger = document.querySelectorAll('.bigger-img');
+  const myDiv = document.querySelector('.container-bigger-img');
+  const closeBtn = document.querySelector('.out-container');
+  const showImg = document.querySelector('.show-img');
 
+  bigger.forEach(img => {
+    img.addEventListener('click', () => {
+      showImg.src = img.src;
+      document.querySelector(".pdf-preview").style.display = "none";
+      myDiv.style.display = 'flex';
+    });
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      myDiv.style.display = 'none';
+      showImg.src = '';
+    });
+  }
+
+  myDiv.addEventListener('click', (e) => {
+    if (e.target === myDiv) {
+      myDiv.style.display = 'none';
+      showImg.src = '';
+    }
+  });
+});
